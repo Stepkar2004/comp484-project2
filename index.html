@@ -1,48 +1,78 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Your Giga Pet</title>
-    <meta name="description" content="A cool thing made with Glitch">
-    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header>
-      <h1>
-        This is your Giga Pet
-      </h1>
-    </header>
 
-    <main>
-      <section class="pet-image-container">
-         <!-- Replace pet image with your own pet image -->
-        <img class="pet-image" src="https://cdn.glitch.com/3aa98e05-3216-497c-a251-210ae4713a83%2Fhound.jpg?1541715339220">
-      </section>
-      <section class="dashboard">
-        <div>Name: <strong><span class="name"></span></strong></div>
-        <div>Weight: <strong><span class="weight"></span> pounds</strong></div>
-        <div>Happiness: <strong><span class="happiness"></span> tail wags (per min)</strong></div>
-        <div class="button-container">
-          <button class="treat-button">
-            Treat
-          </button>
-          <button class="play-button">
-            Play
-          </button>
-          <button class="exercise-button">
-            Exercise
-          </button>
-        </div>
-      </section>
-    </main>
+<head>
+  <title>Your Giga Pet</title>
+  <meta name="description" content="A cool thing made with Glitch">
+  <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    <!-- Your web-app is https, so your scripts need to be too -->
-    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
-            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
-            crossorigin="anonymous"></script>
-  </body>
+<body>
+  <header>
+    <h1>
+      This is your Giga Pet
+    </h1>
+  </header>
+
+  <main>
+    <section class="pet-management">
+      <div class="create-pet">
+        <h3>Create a New Pet</h3>
+        <input type="text" id="new-pet-name" placeholder="Pet Name">
+        <select id="new-pet-type">
+          <option value="cat">Cat</option>
+          <option value="dog">Dog</option>
+          <option value="dragon">Dragon</option>
+          <option value="robot">Robot</option>
+        </select>
+        <button id="create-pet-btn">Create</button>
+      </div>
+      <div class="select-pet">
+        <h3>Select Pet</h3>
+        <select id="pet-selector"></select>
+      </div>
+    </section>
+
+    <section class="pet-image-container">
+      <img class="pet-image" src="assets/images/cat.png" alt="Your Pet">
+    </section>
+    <section class="dashboard">
+      <div>Name: <strong><span class="name"></span></strong></div>
+      <div>Weight: <strong><span class="weight"></span> pounds</strong></div>
+      <div>Happiness: <strong><span class="happiness"></span> tail wags (per min)</strong></div>
+      <div class="button-container">
+        <button class="treat-button">
+          Treat
+        </button>
+        <button class="play-button">
+          Play
+        </button>
+        <button class="exercise-button">
+          Exercise
+        </button>
+        <button class="sleep-button">
+          Sleep
+        </button>
+      </div>
+      <div class="rename-container">
+        <input type="text" id="pet-name-input" placeholder="New Name">
+        <button id="rename-btn">Rename Pet</button>
+      </div>
+      <div class="notification-container">
+        <h3>Pet Log:</h3>
+        <ul id="notification-log"></ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Your web-app is https, so your scripts need to be too -->
+  <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+    integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=" crossorigin="anonymous"></script>
+</body>
+
 </html>
